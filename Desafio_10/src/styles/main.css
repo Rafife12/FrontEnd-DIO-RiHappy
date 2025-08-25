@@ -1,0 +1,170 @@
+@import url("./normalize.css");
+@import url("./buttons.css");
+@import url("./containers_and_frames.css");
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    box-sizing: border-box;
+    user-select: none;
+    font-family: "Press Start 2P", system-ui;
+}
+
+body {
+    cursor: url("../assets/cursor/yugicursor.png"), default;
+}
+
+button,
+button:hover,
+a,
+a:hover,
+img:hover {
+    cursor: url("../assets/cursor/yamiyugicursorGLOW.png"), auto;
+}
+
+.bg-video {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    z-index: -2;
+    overflow: hidden;
+
+    .video {
+        height: 100vh;
+    }
+}
+
+.bg-video::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,1) 100%);
+}
+
+.container {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    height: 100vh;
+
+    .container__left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 35%;
+        min-width: 300px;
+
+        .score_box {
+            background-color: #FFF;
+            padding: 30px;
+        }
+
+        .frame {
+            border: 3px solid #000;
+            border-radius: 5px;
+        }
+
+        #card-image {
+            height: 228px;
+        }
+
+        .card_details {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 6rem;
+            width: 100%;
+            background-color: #FFF;
+            padding: 1rem;
+
+            #card-name,
+            #card-type {
+                font-size: 0.8rem;
+                margin: 0;
+            }
+        }
+    }
+
+    .container__right {
+        width: 65%;
+
+        .card-box__container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100vh;
+            padding: 0.3rem;
+
+            .card-box {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                height: 9rem;
+                width: 100%;
+            }
+
+            .card-versus__container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: 300px;
+                padding-top: 0.1rem;
+
+                .versus-top {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .card-infield {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        height: 11.2rem;
+                        width: 30rem;
+                        
+                        #player-field-card,
+                        #computer-field-card {
+                            height: 180px;
+                            width: 125px;
+                            border: 2px solid #FFF;
+                            border-radius: 8px;
+                        }
+
+                        #field-icon {
+                            height: 100px;
+                        }
+                    }
+                }
+
+                .versus-bottom {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 1rem;
+
+                    #next-duel {
+                        display: none;
+                    }
+                }
+            }
+
+            #player-cards {
+                .card {
+                    transition: transform 0.2s;
+                }
+    
+                .card:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
