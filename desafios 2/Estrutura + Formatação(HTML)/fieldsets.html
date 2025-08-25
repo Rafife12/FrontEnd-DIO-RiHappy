@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fieldsets</title>
+</head>
+<body>
+    <!-- 
+        - fieldset: agrupa elementos de formulário
+        - legend: define um título para o fieldset
+        - label: define um rótulo para um elemento de formulário
+        - input: define um campo de entrada de dados
+        - type: especifica o tipo de entrada (text, email, password, etc.)
+        - name: define o nome do campo de entrada
+        - placeholder: fornece um texto de dica que desaparece quando o usuário começa a digitar
+        - required: indica que o campo é obrigatório
+        - disabled: desabilita o campo de entrada
+        - checked: define o estado inicial de um checkbox ou radio button como selecionado
+        - value: define o valor do campo de entrada
+        - autocomplete: sugere ao navegador que preencha automaticamente o campo com dados previamente inseridos
+        - autofocus: define que o campo deve receber foco automaticamente quando a página é carregada
+        - form: associa o campo de entrada a um formulário específico
+        - form action: especifica a URL para onde o formulário deve ser enviado quando o botão é clicado
+    -->
+
+    <form action="#" method="post">
+        <fieldset>
+            <legend>Informações Pessoais</legend>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="Digite seu telefone">
+
+            <label for="data-nascimento">Data de Nascimento:</label>
+            <input type="date" id="data-nascimento" name="data-nascimento">
+
+            <label for="genero">Gênero:</label>
+            <select id="genero" name="genero">
+                <option value="">Selecione</option>
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+                <option value="outro">Outro</option>
+            </select>
+
+            <button type="submit">Enviar</button>
+        </fieldset>
+        <fieldset>
+            <legend>Preferências</legend>
+            <label for="newsletter">
+                <input type="checkbox" id="newsletter" name="newsletter" checked>
+                Desejo receber novidades por email
+            </label>
+
+            <label for="termos">
+                <input type="checkbox" id="termos" name="termos" required>
+                Aceito os termos e condições
+            </label>
+
+            <button type="submit">Salvar Preferências</button>
+        </fieldset>
+        <fieldset>
+            <legend>Contato</legend>
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="4" cols="50" placeholder="Digite sua mensagem"></textarea>
+
+            <button type="submit">Enviar Mensagem</button>
+        </fieldset>
+    </form>
+
+
+</body>
+</html>

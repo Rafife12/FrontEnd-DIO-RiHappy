@@ -1,0 +1,2 @@
+- permite abrir janela na página com conteúdo de outra página
+- traz websites inteiros para a página

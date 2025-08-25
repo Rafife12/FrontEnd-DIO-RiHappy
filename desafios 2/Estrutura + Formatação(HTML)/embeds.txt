@@ -1,0 +1,17 @@
+
+    QUASE NÃO É MAIS USADA
+        - embed: incorpora conteúdo externo, como vídeos, imagens ou outros documentos
+        - iframe: cria um quadro embutido para exibir outra página HTML
+        - src: especifica a URL do recurso a ser incorporado
+        - width: define a largura do elemento incorporado
+        - height: define a altura do elemento incorporado
+        - allowfullscreen: permite que o conteúdo incorporado seja exibido em tela cheia
+        - frameborder: define se deve haver uma borda ao redor do iframe (0 para sem borda)
+        - scrolling: controla a barra de rolagem do iframe (auto, yes, no)
+        - sandbox: aplica restrições de segurança ao conteúdo incorporado
+        - allow: especifica quais recursos são permitidos no conteúdo incorporado (como autoplay, camera, microphone)
+        - object: define um objeto incorporado, como um vídeo ou uma animação
+        - type: especifica o tipo MIME do recurso incorporado
+        - data: especifica a URL do recurso para o elemento object
+        - param: define parâmetros para o objeto incorporado
+ 
